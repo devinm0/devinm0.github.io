@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.media-grid {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 16px;
+}
+
+.small-media-grid {
+    grid-template-columns: repeat(auto-fit, minmax(32px, 1fr));
+}
+
+.media-item {
+    aspect-ratio: 1 / 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    transition: transform 0.1s ease;
+}
+
+.media-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center bottom;
+    display: block;
+    /* Remove transform from here */
+}
+
+.media-item:hover {
+  transform: scale(1.05);
+}
+
+.media-item figure {
+    margin: 0;
+  }
+  
+.media-item figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    text-align: center;
+    transition: background 0.3s, color 0.3s;
+}
+
+.media-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.video-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+.portfolio-section {
+    padding: 35px;
+}
+
+.fixed-width-section {
+    width: 600px;
+    margin: 0 auto;
+}
