@@ -15,7 +15,7 @@ body {
   margin-top: 25px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 16px;
+  grid-gap: 24px;
 }
 
 .small-media-grid {
@@ -80,9 +80,29 @@ body {
 
 .portfolio-section {
     padding: 35px;
+    margin-top: 35px;
+    margin-bottom: 35px;
 }
 
 .fixed-width-section {
-    width: 600px;
+    max-width: 600px;
+    width: 100%;
     margin: 0 auto;
+    padding: 0 16px;
+}
+
+/* Mobile: 2 columns, tiles min 100px wide */
+@media (max-width: 600px) {
+    .media-grid {
+      grid-gap: 16px;
+      grid-template-columns: repeat(2, minmax(100px, 1fr));
+    }
+    .small-media-grid {
+        grid-template-columns: repeat(auto-fit, minmax(32px, 1fr));
+    }
+    .portfolio-section {
+        padding: 0px;
+        margin-top: 35px;
+        margin-bottom: 35px;
+    }    
 }
