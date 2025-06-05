@@ -30,6 +30,16 @@ body {
     transition: transform 0.1s ease;
 }
 
+.media-item-solo {
+    min-width: 700px;
+    margin: 0 auto;
+    aspect-ratio: 2 / 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    transition: transform 0.1s ease;
+}
+
 .media-item img {
     width: 100%;
     height: 100%;
